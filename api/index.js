@@ -11,7 +11,7 @@ dotenv.config();
 
 mongooes
   .connect(
-    "mongodb+srv://sam_heatfield:namikadze99@cluster0.6onb0.mongodb.net/ecommerce?retryWrites=true&w=majority"
+   process.env.MONGO_URL
   )
   .then(() =>
     app.listen(process.env.PORT || 5000, () => {
